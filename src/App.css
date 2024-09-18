@@ -249,10 +249,6 @@
     margin-bottom: 20px;
 }
 
-.form-content {
-
-}
-
 .consultation-info {
     flex: 1;
     max-width: 100%;
@@ -368,12 +364,7 @@ p {
     margin-right: 8px;
 }
 
-p:nth-child(4)::before {
-    content: "\f3c5"; /* Иконка локации (адрес) */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 8px;
-}
+
 
 p:nth-child(5)::before {
     content: "\f16d"; /* Иконка Instagram */
@@ -493,7 +484,7 @@ p:nth-child(5)::before {
 
 .main__section-block {
   height: 90vh;
-  background-color: #F5F5F5;
+  
   padding-top: 50px;
   
 }
@@ -526,7 +517,162 @@ p:nth-child(5)::before {
   font-weight: 600;
   text-decoration: none;
 }
+.container-big {
+  max-width: 1380px;
+}
 
+
+
+.header__body_main {
+  padding: 40px 80px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+  border-radius: 16px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+  transform: translate(-50%, -60%);
+}
+
+.header__body_main h1 {
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header__body_main h1 span {
+  color: #15A64B;
+  font-weight: 900;
+}
+
+.header__body_main p {
+  margin: 10px 0 15px;
+  color: #222222;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.header__body_main button {
+  width: 75%;
+  padding: 12px 0;
+  font-size: 17px;
+}
+
+.simple-btn {
+  font-size: 17px;
+}
+
+.simple-btn {
+  padding: 10px 25px;
+  border-radius: 6px;
+  background: #15A64B;
+  color: #FFF;
+  border: 0;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.loan__item p:nth-child(3)::before {
+  content: url(https://doctor-dent.kz/wp-content/themes/doctordent/assets/img/loan.svg);
+}
+
+.loan__item p:nth-child(3)::after {
+  content: url(https://doctor-dent.kz/wp-content/themes/doctordent/assets/img/loan.svg);
+}
+
+.loan__item p:nth-child(3) {
+  position: relative;
+  padding: 0 5px;
+}
+
+.loan__item p:nth-child(3)::before {
+  position: absolute;
+  left: -2px;
+  top: -6%;
+}
+
+.loan__item p:nth-child(3)::after {
+  position: absolute;
+  right: -2px;
+  top: -6%;
+}
+
+.loan__body {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.loan__body p {
+  font-weight: 600;
+  color: #222222;
+  font-size: 15px;
+  margin-right: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.loan__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 10px;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  border-radius: 5px;
+  padding: 0 5px;
+  background: #15A64B;
+}
+
+.loan__item:nth-child(2) {
+  background: #FF4431;
+}
+
+.loan__item img {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.loan__item p {
+  color: #FFF;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Nunito Sans";
+}
+
+.header__body {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  scale: 0.96;
+  border-radius: 10px;
+}
 
 
 .hero-section {
@@ -534,6 +680,8 @@ p:nth-child(5)::before {
   padding: 50px 20px;
   border-radius: 20px;
   position: relative;
+  height: 700px;
+  margin: 0 50px;
   
 }
 .hero-slogan {
@@ -580,9 +728,266 @@ p:nth-child(5)::before {
 }
 
 
+.navbar-custom {
+  padding: 20px 0;
+}
+
+.container-custom {
+  width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.navbar__body {
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.navbar__logo {
+  width: 20%;
+}
+
+.navbar__logo img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 100%;
+  height: 50px;
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar__menu a {
+  position: relative;
+}
+
+.navbar__menu a {
+  text-decoration: none;
+  margin: 0 15px;
+  color: #4F4F4F;
+}
+
+.dropdown-content {
+  z-index: 90;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: -10px;
+}
+
+.navbar__menu_mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: 1000;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.dropdown-mobile {
+  margin-top: 50px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.burger-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.fa-solid, .fas {
+  font-weight: 900;
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+  font-family: "Font Awesome 6 Free";
+}
+
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.content-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropbtn>svg {
+  fill: #4F4F4F;
+  width: 10px;
+}
+
+.navbar__menu a::after {
+  content: "";
+  width: 0%;
+  height: 1.3px;
+  position: absolute;
+  bottom: 0;
+  background: #147d3b;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar__menu a:hover::after {
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar__menu a:hover {
+  color: #147d3b;
+}
+
+.content-overlay.show {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 745px) {
+  .navbar__menu {
+      display: none;
+  }
+}
+
+@media (max-width: 745px) {
+  .burger-btn {
+      display: block;
+      padding: 5px 10px;
+      border-radius: 100px;
+      font-size: 18px;
+      background: #15a64a;
+  }
+
+  
+}
+
+.navbar__menu_mobile {
+  display: none;
+}
+.navbar__menu_mobile.show {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar__menu_mobile.show a {
+  text-decoration: none;
+  margin: 10px 0;
+  color: #4F4F4F;
+}
+
+.navbar_white {
+  width: 100%;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.8) !important;
+  z-index: 89;
+  -webkit-animation: coloring;
+  animation: coloring;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  position: fixed;
+  top: 0;
+  padding: 0;
+}
+
+
+.navbar_white hr {
+  display: none;
+}
+
+@-webkit-keyframes coloring {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes coloring {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.mobile__logo{
+  display: none;
+}
+
+.pc__logo {
+  display: block;
+}
+
+
+
+
 @media (max-width: 768px) {
   .nav-list {
     flex-direction: column;
+  }
+
+  .mobile__logo{
+    display: block;
+  }
+
+  .pc__logo {
+    display: none;
   }
 
   .nav-item {
@@ -688,6 +1093,136 @@ p:nth-child(5)::before {
     width: 15px;
     height: 15px;
   }
+
+  .mobile__logo{
+    display: none;
+  }
+
+
   
 
 }
+
+
+@media (max-width: 550px) {
+  .header__body_main {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 30px 5px;
+  }
+
+  .mobile__logo{
+    display: block;
+  }
+
+  .pc__logo {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__body_main {
+      width: 95%;
+  }
+}
+
+@media (max-width: 550px) {
+  .header__body_main h1 {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__body_main button {
+      width: 90%;
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .simple-btn {
+      font-size: 15px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .loan__body {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__body_main p {
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .loan__item {
+      padding: 5px;
+      margin-bottom: 5px;
+  }
+}
+
+.show__modal {
+  display: block;
+  visibility: visible;
+}
+
+
+.modal-custom {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 15%;
+}
+
+.modal-content {
+  border-radius: 16px;
+  background-color: #fefefe;
+  margin: -100px auto;
+  padding: 30px 30px 5px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modalka-title {
+  font-size: 20px;
+  color: #031A0A;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+/* Doctor dent styles */
+

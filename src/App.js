@@ -17,6 +17,7 @@ import {
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import logo from "./img/logo_img1.png";
+import logo2 from "./img/logo_img2.png";
 import mainImg from "./img/shutterstock_407050087.jpg";
 import logoGreen from "./img/5046.png";
 
@@ -30,9 +31,29 @@ function App() {
     }
   };
 
+  const toggleMenu = () => {
+    const mobileMenu = document.querySelector('.navbar__menu_mobile');
+    mobileMenu.classList.toggle('show');
+  }
+
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    
+    // Check if the user has scrolled down (e.g., 100px or more)
+    if (window.scrollY > 200) {
+      navbar.classList.add('navbar_white'); // Add class
+    } else {
+      navbar.classList.remove('navbar_white'); // Remove class when scrolled back up
+    }
+  });
+
+  
+
+  
+
   return (
     <div>
-      <header className="header">
+      {/* <header className="header">
         <div className="container-fluid mt-3 mb-3">
           <div className="row align-items-center">
             <div className="col-sm-4">
@@ -111,7 +132,7 @@ function App() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
 
       {/* <div className="main__section-block container-fluid">
         <div className="row pt-5">
@@ -127,9 +148,122 @@ function App() {
         </div>
       </div> */}
 
+    {/* <div id="myModal" class="modal-custom">
+        <div class="modal-content">
+          <span class="close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3533 0.878982C12.1553 0.88366 11.9671 0.966513 11.8299 1.10945L6.99989 5.93944L2.03897 0.978546C1.96906 0.906553 1.88542 0.84932 1.79299 0.810236C1.70056 0.771152 1.60123 0.751011 1.50088 0.751007C1.35162 0.751043 1.20577 0.795611 1.08198 0.879008C0.958187 0.962404 0.862094 1.08084 0.805991 1.21915C0.749889 1.35747 0.736329 1.50938 0.767046 1.65544C0.797763 1.80151 0.871361 1.93509 0.978422 2.03909L5.93934 6.99998L0.972773 11.9665C0.900794 12.0356 0.843329 12.1184 0.803741 12.21C0.764154 12.3016 0.743241 12.4002 0.742226 12.4999C0.741212 12.5997 0.760117 12.6987 0.797833 12.7911C0.83555 12.8835 0.891321 12.9674 0.961879 13.0379C1.03244 13.1085 1.11637 13.1643 1.20875 13.202C1.30113 13.2397 1.40011 13.2586 1.49989 13.2576C1.59967 13.2566 1.69824 13.2357 1.78984 13.1961C1.88143 13.1565 1.96421 13.099 2.03332 13.0271L6.99989 8.06053L12.2445 13.0449C12.3136 13.1169 12.3964 13.1744 12.488 13.214C12.5796 13.2536 12.6781 13.2745 12.7779 13.2755C12.8777 13.2765 12.9767 13.2576 13.0691 13.2199C13.1614 13.1822 13.2454 13.1264 13.3159 13.0558C13.3865 12.9853 13.4423 12.9013 13.48 12.809C13.5177 12.7166 13.5366 12.6176 13.5356 12.5178C13.5346 12.418 13.5137 12.3195 13.4741 12.2279C13.4345 12.1363 13.377 12.0535 13.305 11.9844L8.06043 6.99998L12.8904 2.17C12.9995 2.06532 13.0744 1.93013 13.1053 1.78215C13.1362 1.63417 13.1217 1.4803 13.0636 1.34073C13.0055 1.20116 12.9066 1.08238 12.7799 0.999987C12.6532 0.91759 12.5045 0.875412 12.3533 0.878982Z" fill="#ABC0B1"></path>
+            </svg>
+          </span>
+          <span class="modalka-title">Подать заявку</span>
+          <div id="modalForm">
+        
+            
+          </div>
+        </div>
+      </div> */}
+      <div class="navbar">
+        <div class="container-custom">
+          <div class="navbar__body">
+            <div class="navbar__logo">
+              <a href="#">
+                <picture>
+                  
+                  <img className="pc__logo"
+                    src={logo}
+                    alt=""
+                  />
+                  <img className="mobile__logo"
+                    src={logo2}
+                    alt=""
+                  />
+                </picture>
+              </a>
+            </div>
+            <div class="navbar__menu">
+              <div class="dropdown">
+                <a href="#services" class="dropbtn">
+                  Услуги
+                </a>
+              </div>
+              <a href="#promotions">Акции</a>
+              
+              
+              <a href="#beleeve__section">О доверии</a>
+              <a href="#contacts">Контакты</a>
+              
+            </div>
+            <div class="navbar__menu_mobile">
+            <div class="dropdown dropdown-mobile">
+                <a href="#services" class="dropbtn">
+                  Услуги
+                </a>
+              </div>
+              <a href="#promotions">Акции</a>
+              
+              
+              <a href="#beleeve__section">О доверии</a>
+              <a href="#contacts">Контакты</a>
+            </div>
+            <div class="navbar__button">
+              <button class="simple-btn" onClick={scrollToConsultation}>
+                Получить консультацию
+              </button>
+            </div>
+            <button className="simple-btn burger-btn" onClick={toggleMenu}>
+              <i className="fa-solid fa-bars"></i>
+            </button>
+
+          </div>
+          <div class="content-overlay" onClick={toggleMenu}></div>
+        </div>
+        <hr/>
+      </div>
+
       <div className="main__section-block">
-        <div class="container">
-          <div class="hero-section row align-items-center">
+        <div class="container-fluid">
+          <div
+            style={{
+              backgroundImage: `url(${mainImg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            className="header__body"
+          >
+            <div class="header__body_main">
+              <h1>
+                Цифровая стоматология <br /> <span>Dent ISS</span>
+              </h1>
+              <p>
+                Нам доверяют свои улыбки уже более <span>20 лет!</span>
+              </p>
+              <button class="simple-btn" onClick={scrollToConsultation}>
+                Получить консультацию
+              </button>
+              <div class="loan__body">
+                <p>Доступно в рассрочку</p>
+                <div class="loan__item">
+                  <img
+                    src="https://doctor-dent.kz/wp-content/themes/doctordent/assets/img/kaspi.svg"
+                    alt=""
+                  />
+                  <p>0</p>
+                  <p>0</p>
+                  <p>12</p>
+                </div>
+                <div class="loan__item">
+                  <img
+                    src="https://doctor-dent.kz/wp-content/themes/doctordent/assets/img/halyk.svg"
+                    alt=""
+                  />
+                  <p>0</p>
+                  <p>0</p>
+                  <p>12</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div class="hero-section row align-items-center">
             <div class="col-sm-12 col-md-6 ">
               <h1 class="hero-slogan">
                 Первая цифровая стоматология в Астане с собственной
@@ -154,7 +288,7 @@ function App() {
                 class="logo-placeholder"
               ></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -413,6 +547,7 @@ function App() {
           </div>
         </div>
       </div>
+      <ContactForm />
       <div id="promotions" className="promotion-section">
         <h2 className="promotion-title">АКЦИИ</h2>
         <div
@@ -423,7 +558,7 @@ function App() {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="promotion-card d-flex align-items-center justify-content-center gap-5">
-              <button
+                <button
                   className="carousel-control-prev"
                   type="button"
                   data-bs-target="#promotionCarousel"
@@ -435,10 +570,8 @@ function App() {
                   ></span>
                   <span className="visually-hidden">Previous</span>
                 </button>
-                
-                  Бесплатный детский чекап и чистка зубов: Заботьтесь о здоровье
-                  зубов ваших детей с самого раннего возраста.
-                
+                Бесплатный детский чекап и чистка зубов: Заботьтесь о здоровье
+                зубов ваших детей с самого раннего возраста.
                 <button
                   className="carousel-control-next"
                   type="button"
@@ -452,7 +585,6 @@ function App() {
                   <span className="visually-hidden">Next</span>
                 </button>
               </div>
-              
             </div>
             <div className="carousel-item">
               <div className="promotion-card d-flex align-items-center justify-content-center gap-5">
@@ -468,10 +600,8 @@ function App() {
                   ></span>
                   <span className="visually-hidden">Previous</span>
                 </button>
-                
-                  Акция на импланты MegaGen: Высококачественные корейские
-                  импланты по доступной цене.
-                
+                Акция на импланты MegaGen: Высококачественные корейские импланты
+                по доступной цене.
                 <button
                   className="carousel-control-next"
                   type="button"
@@ -509,7 +639,7 @@ function App() {
           Записаться
         </button>
       </div>
-      <div className="beleeve__section">
+      <div id="beleeve__section" className="beleeve__section">
         <h2 className="beleeve__section-title">О ДОВЕРИИ</h2>
         <div className="d-flex justify-content-center">
           <div className="beleeve__section-text">
