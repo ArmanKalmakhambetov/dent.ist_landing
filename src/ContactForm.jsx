@@ -21,10 +21,7 @@ export default function ContactForm() {
                 <button type="submit" className="submit-btn">
                   Записаться
                 </button>
-                <label className="checkbox-container">
-                  <input type="checkbox" required />
-                  <span>Я согласен на обработку своих персональных данных</span>
-                </label>
+                
               </form>
             </div>
           </div>
