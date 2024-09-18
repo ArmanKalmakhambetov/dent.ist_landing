@@ -545,7 +545,7 @@ p:nth-child(5)::before {
 }
 
 .header__body_main h1 span {
-  color: #15A64B;
+  color: #6e9489;
   font-weight: 900;
 }
 
@@ -569,7 +569,7 @@ p:nth-child(5)::before {
 .simple-btn {
   padding: 10px 25px;
   border-radius: 6px;
-  background: #15A64B;
+  background: #6e9489;
   color: #FFF;
   border: 0;
   outline: none;
